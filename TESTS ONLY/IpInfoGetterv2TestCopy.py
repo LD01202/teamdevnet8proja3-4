@@ -159,11 +159,12 @@ def mkFile(reportout):
     dateString = now.strftime("%Y") + "-" + now.strftime("%m") + "-" + now.strftime("%d") + " " + now.strftime("%H%M%S")
     logName = "LOGFILE "+dateString+".txt"
     try:
-        f = open(os.path.join("log_ipinfogettertest",logName), "x")
+        #when testing locally, remove 'TESTS ONLY' from the path wherein the log will be saved
+        f = open(os.path.join("TESTS ONLY","log_ipinfogettertest",logName), "x")
         f.write(reportout)
         print_cyan_on_black_bold("log file located in log_ipinfogettertest/" + logName)
     except FileExistsError:
-        print_red_on_black("\nDirectory log does not exist. Please check current working directory")
+        print_red_on_black("\nDirectory for logs does not exist. Please check current working directory")
         ver = False  
     return ver  
 
