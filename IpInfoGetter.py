@@ -28,6 +28,7 @@ print_red_on_black = lambda x: cprint(x,"red", "on_black")
 print_magenta_on_black = lambda x: cprint(x,"magenta","on_black")
 print_cyan_on_black_bold = lambda x: cprint(x,"cyan","on_black",attrs=["bold"])
 
+colorama.init()
 print_magenta_on_black("=================================================================")
 print_magenta_on_black("Project Activity 4 - October 23 2023")
 print_magenta_on_black("Python Application to Get IP Information \nof Current Machine")
