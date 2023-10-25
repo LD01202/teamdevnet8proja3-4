@@ -19,6 +19,7 @@ from datetime import datetime
 from requests import get
 import json
 import os
+import colorama
 
 choice=0
 again=True
